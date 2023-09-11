@@ -1,0 +1,2 @@
+# SZLG12F
+SZLG 2023-24-es tanév
