@@ -2,6 +2,7 @@
 
 ## Témakörök
 1. [Gráfok](1_grafok)
+    1. Gráfreprezentációk
     2. Bejárások (szélességi, mélységi)
 
 ## Házi feladatok
