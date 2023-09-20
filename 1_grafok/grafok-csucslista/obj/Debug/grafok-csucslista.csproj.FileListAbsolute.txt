@@ -1,0 +1,8 @@
+D:\.programming\SZLG12F\1_grafok\grafok-csucslista\bin\Debug\grafok-csucslista.exe.config
+D:\.programming\SZLG12F\1_grafok\grafok-csucslista\bin\Debug\grafok-csucslista.exe
+D:\.programming\SZLG12F\1_grafok\grafok-csucslista\bin\Debug\grafok-csucslista.pdb
+D:\.programming\SZLG12F\1_grafok\grafok-csucslista\obj\Debug\grafok-csucslista.csproj.AssemblyReference.cache
+D:\.programming\SZLG12F\1_grafok\grafok-csucslista\obj\Debug\grafok-csucslista.csproj.SuggestedBindingRedirects.cache
+D:\.programming\SZLG12F\1_grafok\grafok-csucslista\obj\Debug\grafok-csucslista.csproj.CoreCompileInputs.cache
+D:\.programming\SZLG12F\1_grafok\grafok-csucslista\obj\Debug\grafok-csucslista.exe
+D:\.programming\SZLG12F\1_grafok\grafok-csucslista\obj\Debug\grafok-csucslista.pdb

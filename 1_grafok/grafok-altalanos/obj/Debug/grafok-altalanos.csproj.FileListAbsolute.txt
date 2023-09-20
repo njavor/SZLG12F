@@ -1,0 +1,8 @@
+D:\.programming\SZLG12F\1_grafok\grafok-altalanos\bin\Debug\grafok-altalanos.exe.config
+D:\.programming\SZLG12F\1_grafok\grafok-altalanos\bin\Debug\grafok-altalanos.exe
+D:\.programming\SZLG12F\1_grafok\grafok-altalanos\bin\Debug\grafok-altalanos.pdb
+D:\.programming\SZLG12F\1_grafok\grafok-altalanos\obj\Debug\grafok-altalanos.csproj.AssemblyReference.cache
+D:\.programming\SZLG12F\1_grafok\grafok-altalanos\obj\Debug\grafok-altalanos.csproj.SuggestedBindingRedirects.cache
+D:\.programming\SZLG12F\1_grafok\grafok-altalanos\obj\Debug\grafok-altalanos.csproj.CoreCompileInputs.cache
+D:\.programming\SZLG12F\1_grafok\grafok-altalanos\obj\Debug\grafok-altalanos.exe
+D:\.programming\SZLG12F\1_grafok\grafok-altalanos\obj\Debug\grafok-altalanos.pdb

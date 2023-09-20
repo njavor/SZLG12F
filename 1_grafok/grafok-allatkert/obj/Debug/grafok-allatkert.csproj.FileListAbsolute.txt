@@ -1,0 +1,8 @@
+D:\.programming\SZLG12F\1_grafok\grafok-allatkert\bin\Debug\grafok-allatkert.exe.config
+D:\.programming\SZLG12F\1_grafok\grafok-allatkert\bin\Debug\grafok-allatkert.exe
+D:\.programming\SZLG12F\1_grafok\grafok-allatkert\bin\Debug\grafok-allatkert.pdb
+D:\.programming\SZLG12F\1_grafok\grafok-allatkert\obj\Debug\grafok-allatkert.csproj.AssemblyReference.cache
+D:\.programming\SZLG12F\1_grafok\grafok-allatkert\obj\Debug\grafok-allatkert.csproj.SuggestedBindingRedirects.cache
+D:\.programming\SZLG12F\1_grafok\grafok-allatkert\obj\Debug\grafok-allatkert.csproj.CoreCompileInputs.cache
+D:\.programming\SZLG12F\1_grafok\grafok-allatkert\obj\Debug\grafok-allatkert.exe
+D:\.programming\SZLG12F\1_grafok\grafok-allatkert\obj\Debug\grafok-allatkert.pdb
