@@ -7,25 +7,24 @@
 
 
 
-
+<br><br>
 ## Bejárások
 Egy-egy bejárásnál azt vizsgáljuk, hogy a gráfunkban egy megadott csúcstól képesek vagyunk-e eljutni egy másik megadott csúcsba. Ezt két féle képpen vizsgálhatjuk, ***szélességi bejárással** (Breadth-first search - BFS)* vagy ***mélységi bejárással** (Depth-first search - DFS)*.
-<br><br><br>
-
+<br><br>
 
 A ***szélességi bejárás*** olyan, mint a pénztárnál álló sor.
 
 Tegyük fel, hogy amikor egy vevő fizet, akkor behív még *x* vásárlót *('x' lehet 0 db)*, hogy álljon sorba. Ebben a helyzetben az újonnan beérkező vásárlók a sor végére állnak be. Hozzájuk azután jutunk el, hogy a már sorban álló vevőket lefizettetük. Magyarán mindig
 
-#### a *legrégebbi teendőmet* vizsgálom meg először, a vizsgálatnál talált új elemek a *teendőim listájának végére* kerülnek.
-<br><br>
+**a *legrégebbi teendőmet* vizsgálom meg először, a vizsgálatnál talált új elemek a *teendőim listájának végére* kerülnek.**
+<br><br><br>
 
 
 A ***mélységi bejárás*** ezzel szemben olyan, mintha egy labirintusból szeretnénk kijutni.
 
 Indulás után, amikor egy elágazáshoz érünk, akkor az egyik úton továbbhaladunk. Ezt addig ismételgetjük, amíg érünk zsákutcába. Amikor ez megtörténik, akkor visszamegyünk a legutolsó elágazásig, ahol pedig a másik úton haladunk tovább. Ezt, a "végigmegyünk a zsákutcáig, vissza az utolsó elágazásig" folyamatot ismételgetjük, amíg ki nem jutunk a labirintusból. Magyarán mindig
 
-####  a *legfrissebb teendőmet* vizsgálom meg először, a vizsgálatnál talált új elemek a *teendőim listájának elejére* kerülnek.
+**a *legfrissebb teendőmet* vizsgálom meg először, a vizsgálatnál talált új elemek a *teendőim listájának elejére* kerülnek.**
 
 
 
