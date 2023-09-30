@@ -4,10 +4,12 @@
 1. [Gráfok](1_grafok)
     1. Gráfreprezentációk
     2. Bejárások (szélességi, mélységi)
+    3. Legrövidebb út
 
 ## Házi feladatok
 | Témakör | Feladat | /100 |
 | :---: | :---: | :---: |
+| **GRAF** | Haladó -> Gráfok, mélységi bejárás -> 69. Kerítés ()
 
 ## Órai feladatok
 ### 1. [Gráfok](1_grafok)
