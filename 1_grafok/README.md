@@ -117,7 +117,7 @@ Függvény vége
 ```
 </details>
 
-[C#](_assets/bfs.cs) - [C++]() - [python]()
+[C#](_assets/bfs.cs)
 
 
 <details>
@@ -165,7 +165,7 @@ Függvény vége
 ```
 </details>
 
-[C#](_assets/dfs.cs) - [C++]() - [python]()
+[C#](_assets/dfs.cs)
 
 
 ## Legrövidebb út
