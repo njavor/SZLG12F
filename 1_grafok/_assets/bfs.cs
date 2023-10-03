@@ -1,4 +1,4 @@
-public int El_lehet_e_jutni_szelessegivel(int innen, int ide)
+public bool El_lehet_e_jutni_szelessegivel(int innen, int ide)
 {
     int feher = 0, szurke = 1, fekete = 2;
 
@@ -14,7 +14,7 @@ public int El_lehet_e_jutni_szelessegivel(int innen, int ide)
         feldolgozando = tennivalok.Dequeue();
         if (feldolgozando == ide)
             return true;
-        szín[feldolgozando] = fekete;
+        szin[feldolgozando] = fekete;
 
         foreach (int szomszed in szomszedsagi_lista[feldolgozando])
             if (szin[szomszed] == feher)
