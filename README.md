@@ -5,6 +5,7 @@
     1. Gráfreprezentációk
     2. Bejárások (szélességi, mélységi)
     3. Legrövidebb út
+    4. Dijkstra-algoritmus
 
 ## Házi feladatok
 | Témakör | Feladat | /100 |
@@ -16,3 +17,4 @@
 - [Állatkert](1_grafok/grafok-allatkert/Program.cs)
 - [Általános](1_grafok/grafok-altalanos/Program.cs)
 - [Csúcslista](1_grafok/grafok-csucslista/Program.cs)
+- [Dijkstra](1_grafok/grafok-dijkstra/Program.cs)
