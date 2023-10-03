@@ -12,14 +12,15 @@
 Egy-egy bejárásnál azt vizsgáljuk, hogy a gráfunkban egy megadott csúcstól képesek vagyunk-e eljutni egy másik megadott csúcsba. Ezt két féle képpen vizsgálhatjuk, ***szélességi bejárással** (Breadth-first search - BFS)* vagy ***mélységi bejárással** (Depth-first search - DFS)*.
 <br><br>
 
+
 A ***szélességi bejárás*** olyan, mint a pénztárnál álló sor.
 
 Tegyük fel, hogy amikor egy vevő fizet, akkor behív még *x* vásárlót *('x' lehet 0 db)*, hogy álljon sorba. Ebben a helyzetben az újonnan beérkező vásárlók a sor végére állnak be. Hozzájuk azután jutunk el, hogy a már sorban álló vevőket lefizettetük. Magyarán mindig
 
 **a *legrégebbi teendőmet* vizsgálom meg először, a vizsgálatnál talált új elemek a *teendőim listájának végére* kerülnek.**
-<br><br><br>
 
 
+<br><br>
 A ***mélységi bejárás*** ezzel szemben olyan, mintha egy labirintusból szeretnénk kijutni.
 
 Indulás után, mikor egy elágazáshoz érünk, akkor az egyik úton továbbhaladunk. Ezt addig ismételgetjük, amíg zsákutcába nem érünk. Amikor ez megtörténik, akkor visszamegyünk a legutolsó elágazásig, ahol pedig a másik úton haladunk tovább. Ezt, a "végigmegyünk a zsákutcáig, vissza az utolsó elágazásig" folyamatot ismételgetjük, amíg ki nem jutunk a labirintusból. Magyarán mindig
@@ -40,7 +41,7 @@ Vegyük az alábbi irányított gráfot példaként:
 <summary><b>Levezetés:</b></summary>
 <br>
 
-| # | Szélességi bejárás (BFS) | teendők<br>listája | Mélységi bejárás (DFS) | teendők<br>listája |
+| # | Szélességi bejárás (BFS) | teendők<br>sorrendje | Mélységi bejárás (DFS) | teendők<br>sorrendje |
 | :---: | :---: | :---: | :---: | :---: |
 | **0.**| ![](_assets/graf-bejarasok-1.png) | 0 | ![](_assets/graf-bejarasok-1.png) | 0 |
 | **1.**| ![](_assets/graf-bejarasok-2.png) | 1<br>2<br>3<br>5<br>6 | ![](_assets/graf-bejarasok-2.png) | 1<br>2<br>3<br>5<br>6 |
@@ -170,26 +171,60 @@ Függvény vége
 
 ## Legrövidebb út
 
-## Dijkstra algoritmus
+## Dijkstra-algoritmus
 
-Ez gyakorlatilag egy gráf bejárással kombinált mohó algoritmus, súlyozott utakkal.
-
-Maga az algoritmus nem azt mondja meg, hogy 'A'-ból 'B'-be melyik a leggyorsabb út, hanem, hogy 'A'-ból bárhova melyik a leggyorsabb út.
-
-Kiszámoljuk, hogy melyiket mennyibe kerül elérni, frissítjük, az egyes helyek elérhetőségének költségét.
+A **Djikstra-algoritmus** egy (gráf bejárással kombinált) mohó algoritmus, amit súlyozott gráfoknál használunk, a legrövidebb út megállapítására egy adott csúcsból. 
 
 
+> #### Wikipédia percek:
+>
+> A Dijkstra-algoritmust Edsger Wybe Dijkstra holland informatikus fejlesztette ki. Az "eredeti" algoritmus két megadott csúcs között kereste meg a legrövidebb utat, ma már viszont az a verzió az elterjedtebb, amiben az algoritmus *egy kijelölt csúcstól* indulva, ahhoz képest adja meg a *legrövidebb utat az összes többi csúcsba*.
 
-> Negatív számokkal nem működik.
+Maga az algoritmus **nem azt mondja meg**, hogy *'A'-ból 'B'-be* melyik a leggyorsabb út, hanem, hogy ***'A'-ból bárhova*** melyik a leggyorsabb út. A csúcsok vizsgálatának sorrendje az egyes utak súlyozásától függ. Tehát, mindig a leggyorsabb úton megyünk végig elsőnek.
 
+Ez az algoritmus a gráf teljes bejárását igényli, hiszen sosem tudjuk biztosra, hogy egy, még nem vizsgált út nem-e lesz gyorsabb, mint amit leggyorsabb útként tárolunk.
+
+#### Hogyan tároljuk az egyes csúcsokba való eljutást?
+Minden csúcsnál két információt tárolunk, azt hogy ```mennyibe került idejutni``` és hogy ```kitől jutottam el ide```. Ezt a tárolt információt akkor vizsgáljuk fölül, ha az adott csúcsba egy új utat járva próbálunk eljutni.
+
+Ha egy csúcsba több úton is eljuthatunk, akkor meg kell vizsgálnunk, hogy az előző út, amin eljutottunk oda, az gyorsabb-e. Ha igen, akkor nem csinálunk semmit, ha nem, akkor felülírjuk az előző értéket.
+
+[*Angol nyelvű magyarázó videó*]()
+
+**FONTOS:** Negatív számokkal nem működik.
+
+
+<br><br>
 ### Példa
 
-Vegyük ehhez az alábbi példát
+Példán keresztül talán egyszerűbb megérteni. Vegyük az alábbi súlyozott irányítatlan gráfot:
+![](_assets/graf-dijkstra.png)
 
+**Feladat: ```A``` és ```B``` csúcs közötti legrövidebb út megtalálása**
 
-Az adatok tárolásához kupacokat fogunk (priority queue) használni, mivel 
+<details>
+<summary><b>Levezetés:</b></summary>
+<br>
 
+| # | Dijkstra-algoritmus | legrövidebb<br>út |  látogatott<br>csúcsok | még nem<br>látogatott<br>csúcsok |
+| :--: | :--: | :--: |  :--: | :--: |
+| 0. | ![](_assets/graf-dijkstra-1.png) | ![](_assets/graf-dijkstra-12.png) | [] |  [A,B,C,D,E] |
+| 1. | ![](_assets/graf-dijkstra-2.png) | ![](_assets/graf-dijkstra-22.png) | [] |  [A,B,C,D,E] |
+| 2. | ![](_assets/graf-dijkstra-3.png) | ![](_assets/graf-dijkstra-32.png) | [A] |  [B,C,D,E] |
+| 3. | ![](_assets/graf-dijkstra-4.png) | ![](_assets/graf-dijkstra-42.png) | [A,D] |  [B,C,E] |
+| 4. | ![](_assets/graf-dijkstra-5.png) | ![](_assets/graf-dijkstra-52.png) | [A,D,E] |  [B,C] |
+| 5. | ![](_assets/graf-dijkstra-6.png) | ![](_assets/graf-dijkstra-52.png) | [A,D,E,B] |  [C] |
+| 5. | ![](_assets/graf-dijkstra-7.png) | ![](_assets/graf-dijkstra-52.png) | [A,D,E,B,C] |  [] |
+</details>
+
+A tárolt adatok táblázatából egyből láthatjuk, hogy ```B``` csúcsba 3 a legrövidebb út, amit ```D```csúcson keresztül érhetünk el.
+
+Ha magát az útvonalat szeretnénk megkapni, akkor szimplán elindulunk visszafelé. Ha az alábbi példából indulunk ki, akkor kiindulunk ```B```-ből, ott látjuk, hogy a ```D``` csúcsból értük el legrövidebben, majd ugyanezt megismételjük ```D```-nél (és így folytatódna, ha nagyobb lenne a gráf), mire eljutunk ```A```-hoz.
+
+<br><br>
 ### Pszeudokód
+
+Az adatok tárolásához ***kupacokat** (priority queue)* fogunk  használni, mivel mindig a lerövidebb utat akarjuk először megvizsgálni.
 
 ```
 ```
