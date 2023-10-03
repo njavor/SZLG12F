@@ -22,7 +22,7 @@ Tegyük fel, hogy amikor egy vevő fizet, akkor behív még *x* vásárlót *('x
 
 A ***mélységi bejárás*** ezzel szemben olyan, mintha egy labirintusból szeretnénk kijutni.
 
-Indulás után, amikor egy elágazáshoz érünk, akkor az egyik úton továbbhaladunk. Ezt addig ismételgetjük, amíg érünk zsákutcába. Amikor ez megtörténik, akkor visszamegyünk a legutolsó elágazásig, ahol pedig a másik úton haladunk tovább. Ezt, a "végigmegyünk a zsákutcáig, vissza az utolsó elágazásig" folyamatot ismételgetjük, amíg ki nem jutunk a labirintusból. Magyarán mindig
+Indulás után, mikor egy elágazáshoz érünk, akkor az egyik úton továbbhaladunk. Ezt addig ismételgetjük, amíg zsákutcába nem érünk. Amikor ez megtörténik, akkor visszamegyünk a legutolsó elágazásig, ahol pedig a másik úton haladunk tovább. Ezt, a "végigmegyünk a zsákutcáig, vissza az utolsó elágazásig" folyamatot ismételgetjük, amíg ki nem jutunk a labirintusból. Magyarán mindig
 
 **a *legfrissebb teendőmet* vizsgálom meg először, a vizsgálatnál talált új elemek a *teendőim listájának elejére* kerülnek.**
 
@@ -42,7 +42,7 @@ Vegyük az alábbi irányított gráfot példaként:
 
 | # | Szélességi bejárás (BFS) | teendők<br>listája | Mélységi bejárás (DFS) | teendők<br>listája |
 | :---: | :---: | :---: | :---: | :---: |
-| **0.**| ![](_assets/graf-bejarasok-1.png) | 0 | ![](_assets/graf-bejarasok-1.png) | |
+| **0.**| ![](_assets/graf-bejarasok-1.png) | 0 | ![](_assets/graf-bejarasok-1.png) | 0 |
 | **1.**| ![](_assets/graf-bejarasok-2.png) | 1<br>2<br>3<br>5<br>6 | ![](_assets/graf-bejarasok-2.png) | 1<br>2<br>3<br>5<br>6 |
 | **2.**| ![](_assets/graf-bejarasok-3.png) | 2<br>3<br>5<br>6 | ![](_assets/graf-bejarasok-3.png) | 2<br>3<br>5<br>6 |
 | **3.**| ![](_assets/graf-bejarasok-4.png) | 3<br>5<br>6<br>4 | ![](_assets/graf-bejarasok-4.png) | 4<br>3<br>5<br>6 |
@@ -117,7 +117,7 @@ Függvény vége
 ```
 </details>
 
-[C#](_assets/bfs.cs) - [C++]() - [python]()
+[C#](_assets/bfs.cs)
 
 
 <details>
@@ -165,7 +165,32 @@ Függvény vége
 ```
 </details>
 
-[C#](_assets/dfs.cs) - [C++]() - [python]()
+[C#](_assets/dfs.cs)
 
 
 ## Legrövidebb út
+
+## Dijkstra algoritmus
+
+Ez gyakorlatilag egy gráf bejárással kombinált mohó algoritmus, súlyozott utakkal.
+
+Maga az algoritmus nem azt mondja meg, hogy 'A'-ból 'B'-be melyik a leggyorsabb út, hanem, hogy 'A'-ból bárhova melyik a leggyorsabb út.
+
+Kiszámoljuk, hogy melyiket mennyibe kerül elérni, frissítjük, az egyes helyek elérhetőségének költségét.
+
+
+
+> Negatív számokkal nem működik.
+
+### Példa
+
+Vegyük ehhez az alábbi példát
+
+
+Az adatok tárolásához kupacokat fogunk (priority queue) használni, mivel 
+
+### Pszeudokód
+
+```
+```
+C#

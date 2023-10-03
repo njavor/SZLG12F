@@ -8,80 +8,115 @@ namespace graf_kerites_udito_monopolium
 {
     internal class Program
     {
-        public class Graf
+        class Bergengoc
         {
+            public int italpreferencia; //Calo vagy Pipse
+            public List<int> baratok;
 
-            List<int>[] szomszedsagi_lista;
-
-            public Graf()
+            public Bergengoc(int ital)
             {
+                italpreferencia = ital;
+                baratok = new List<int>();
+            }
+
+            public void Diagnosztika()
+            {
+                Console.WriteLine("\n\n-----------------------\nDiagnosztika - bergeng\n- - - - - - - - - - - -\n");
+                for (int i = 0; i < baratok.Count(); i++)
+                    Console.Write($"[{i} - ital:{italpreferencia}]: [{String.Join(", ", baratok[i])}]\n");
+                Console.WriteLine("\n-----------------------\n");
+            }
+        }
+        class Teszteset
+        {
+            List<Bergengoc> bergengoclista;
+
+            public Teszteset(int N, int M)
+            {
+                bergengoclista = new List<Bergengoc>();
                 string[] sor = Console.ReadLine().Split(' ');
-                int T = int.Parse(sor[0]);
-
-
-                
-                // tesztesetek
-                for (int i = 0; i < T; i++)
-                {
-
-                }
-
-                sor = Console.ReadLine().Split(' ');
-                int N = int.Parse(sor[0]), M = int.Parse(sor[1]);
-
-                szomszedsagi_lista = new List<int>[N];
                 for (int i = 0; i < N; i++)
-                    szomszedsagi_lista[i] = new List<int>();
+                    bergengoclista.Add(new Bergengoc(int.Parse(sor[i])));
 
-                for (int i = 0; i < M; i++)
+                for (int j = 0; j < M; j++)
                 {
                     sor = Console.ReadLine().Split(' ');
-                    szomszedsagi_lista[int.Parse(sor[0])].Add(int.Parse(sor[1]));
+                    //kölcsönös a kapcsolat
+                    bergengoclista[int.Parse(sor[0])-1].baratok.Add(int.Parse(sor[1]) - 1);
+                    bergengoclista[int.Parse(sor[1]) - 1].baratok.Add(int.Parse(sor[0]) - 1);
                 }
             }
 
             public void Diagnosztika()
             {
                 Console.WriteLine("\n\n-----------------------\nDiagnosztika\n- - - - - - - - - - - -\n");
-                for (int i = 0; i < szomszedsagi_lista.Length; i++)
-                    Console.Write($"[{i}]: [{String.Join(", ", szomszedsagi_lista[i])}]\n");
+                for (int i = 0; i < bergengoclista.Count(); i++)
+                {
+                    Console.Write($"[{i} - ital:{bergengoclista[i].italpreferencia}]: [{String.Join(", ", bergengoclista[i].baratok)}]\n");
+                }
                 Console.WriteLine("\n-----------------------\n");
             }
-
-
-
-            public bool El_lehet_e_jutni_melysegivel(int innen, int ide)
-            {
-                int feher = 0, szurke = 1, fekete = 2;
-
-                int[] szin = new int[szomszedsagi_lista.Length];
-
-                Stack<int> tennivalok = new Stack<int>();
-                tennivalok.Push(innen);
-                szin[innen] = szurke;
-
-                int feldolgozando;
-                while (tennivalok.Count != 0)
-                {
-                    feldolgozando = tennivalok.Pop();
-                    if (feldolgozando == ide)
-                        return true;
-                    szin[feldolgozando] = fekete;
-
-                    foreach (int szomszed in szomszedsagi_lista[feldolgozando])
-                        if (szin[szomszed] == feher)
-                        {
-                            tennivalok.Push(szomszed);
-                            szin[szomszed] = szurke;
-                        }
-                }
-
-                return false;
-            }
         }
-
         static void Main(string[] args)
         {
+            int T = int.Parse(Console.ReadLine());
+            List<Teszteset> tesztesetek = new List<Teszteset>();
+
+            string[] sor;
+            int N, M;
+            for (int i = 0; i < T; i++)
+            {
+                sor = Console.ReadLine().Split(' ');
+                N = int.Parse(sor[0]);
+                M = int.Parse(sor[1]);
+
+                tesztesetek.Add(new Teszteset(N, M));
+            }
+
+
+
+
+            //diagnosztika
+            /*
+             */
+            foreach (var teszt in tesztesetek)
+            {
+                Console.WriteLine("TESZTEK DIAGNOSZTIKÁJA");
+                teszt.Diagnosztika();
+            }
         }
     }
 }
+
+/*
+ * Példa bemenet
+2
+4 3
+0 1 0 0
+1 2
+2 3
+2 4
+5 4
+0 1 1 0 1
+1 2
+2 3
+3 4
+4 5
+
+2
+4 3
+0 1 0 0
+0 1
+1 2
+1 3
+5 4
+0 1 1 0 1
+0 1
+1 2
+2 3
+3 4
+
+ * Példa kimenet
+1
+2
+*/
