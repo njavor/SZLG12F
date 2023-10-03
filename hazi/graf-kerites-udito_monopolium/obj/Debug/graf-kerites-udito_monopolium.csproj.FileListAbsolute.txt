@@ -1,0 +1,8 @@
+D:\.programming\SZLG12F\hazi\graf-kerites-udito_monopolium\bin\Debug\graf-kerites-udito_monopolium.exe.config
+D:\.programming\SZLG12F\hazi\graf-kerites-udito_monopolium\bin\Debug\graf-kerites-udito_monopolium.exe
+D:\.programming\SZLG12F\hazi\graf-kerites-udito_monopolium\bin\Debug\graf-kerites-udito_monopolium.pdb
+D:\.programming\SZLG12F\hazi\graf-kerites-udito_monopolium\obj\Debug\graf-kerites-udito_monopolium.csproj.AssemblyReference.cache
+D:\.programming\SZLG12F\hazi\graf-kerites-udito_monopolium\obj\Debug\graf-kerites-udito_monopolium.csproj.SuggestedBindingRedirects.cache
+D:\.programming\SZLG12F\hazi\graf-kerites-udito_monopolium\obj\Debug\graf-kerites-udito_monopolium.csproj.CoreCompileInputs.cache
+D:\.programming\SZLG12F\hazi\graf-kerites-udito_monopolium\obj\Debug\graf-kerites-udito_monopolium.exe
+D:\.programming\SZLG12F\hazi\graf-kerites-udito_monopolium\obj\Debug\graf-kerites-udito_monopolium.pdb

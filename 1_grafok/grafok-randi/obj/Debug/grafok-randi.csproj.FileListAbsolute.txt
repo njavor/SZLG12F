@@ -1,0 +1,8 @@
+D:\.programming\SZLG12F\1_grafok\grafok-randi\bin\Debug\grafok-randi.exe.config
+D:\.programming\SZLG12F\1_grafok\grafok-randi\bin\Debug\grafok-randi.exe
+D:\.programming\SZLG12F\1_grafok\grafok-randi\bin\Debug\grafok-randi.pdb
+D:\.programming\SZLG12F\1_grafok\grafok-randi\obj\Debug\grafok-randi.csproj.AssemblyReference.cache
+D:\.programming\SZLG12F\1_grafok\grafok-randi\obj\Debug\grafok-randi.csproj.SuggestedBindingRedirects.cache
+D:\.programming\SZLG12F\1_grafok\grafok-randi\obj\Debug\grafok-randi.csproj.CoreCompileInputs.cache
+D:\.programming\SZLG12F\1_grafok\grafok-randi\obj\Debug\grafok-randi.exe
+D:\.programming\SZLG12F\1_grafok\grafok-randi\obj\Debug\grafok-randi.pdb

@@ -1,0 +1,8 @@
+D:\.programming\SZLG12F\1_grafok\grafok-dijkstra\bin\Debug\grafok-dijkstra.exe.config
+D:\.programming\SZLG12F\1_grafok\grafok-dijkstra\bin\Debug\grafok-dijkstra.exe
+D:\.programming\SZLG12F\1_grafok\grafok-dijkstra\bin\Debug\grafok-dijkstra.pdb
+D:\.programming\SZLG12F\1_grafok\grafok-dijkstra\obj\Debug\grafok-dijkstra.csproj.AssemblyReference.cache
+D:\.programming\SZLG12F\1_grafok\grafok-dijkstra\obj\Debug\grafok-dijkstra.csproj.SuggestedBindingRedirects.cache
+D:\.programming\SZLG12F\1_grafok\grafok-dijkstra\obj\Debug\grafok-dijkstra.csproj.CoreCompileInputs.cache
+D:\.programming\SZLG12F\1_grafok\grafok-dijkstra\obj\Debug\grafok-dijkstra.exe
+D:\.programming\SZLG12F\1_grafok\grafok-dijkstra\obj\Debug\grafok-dijkstra.pdb

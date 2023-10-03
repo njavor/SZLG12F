@@ -169,3 +169,28 @@ Függvény vége
 
 
 ## Legrövidebb út
+
+## Dijkstra algoritmus
+
+Ez gyakorlatilag egy gráf bejárással kombinált mohó algoritmus, súlyozott utakkal.
+
+Maga az algoritmus nem azt mondja meg, hogy 'A'-ból 'B'-be melyik a leggyorsabb út, hanem, hogy 'A'-ból bárhova melyik a leggyorsabb út.
+
+Kiszámoljuk, hogy melyiket mennyibe kerül elérni, frissítjük, az egyes helyek elérhetőségének költségét.
+
+
+
+> Negatív számokkal nem működik.
+
+### Példa
+
+Vegyük ehhez az alábbi példát
+
+
+Az adatok tárolásához kupacokat fogunk (priority queue) használni, mivel 
+
+### Pszeudokód
+
+```
+```
+C#

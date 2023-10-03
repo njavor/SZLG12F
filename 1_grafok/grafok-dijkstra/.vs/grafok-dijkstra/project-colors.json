@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3f15acf7-7620-441e-a26b-b0394d717752": {
+      "ProjectGuid": "3f15acf7-7620-441e-a26b-b0394d717752",
+      "DisplayName": "grafok-dijkstra",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
