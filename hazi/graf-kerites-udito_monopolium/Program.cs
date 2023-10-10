@@ -89,7 +89,13 @@ namespace graf_kerites_udito_monopolium
 }
 
 /*
- * Példa bemenet
+
+Gondolatmenet:
+    meg kell keresni a legtöbb baráttal rendelkező bergengócot,
+    úgy hogy a kevésbé szeretett üdítőt szeresse.
+
+
+* Példa bemenet
 2
 4 3
 0 1 0 0
