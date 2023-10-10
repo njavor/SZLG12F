@@ -31,8 +31,6 @@ namespace grafok_dijkstra
                         if (i == j && szomszedsagi_matrix[i][j] == int.MaxValue)
                             szomszedsagi_matrix[i][j] = 0;
 
-
-
                 // súlyozás feltöltése
                 for (int i = 0; i < M; i++)
                 {
@@ -40,6 +38,7 @@ namespace grafok_dijkstra
                     szomszedsagi_matrix[int.Parse(sor[0])][int.Parse(sor[1])] = int.Parse(sor[2]);
                     szomszedsagi_matrix[int.Parse(sor[1])][int.Parse(sor[0])] = int.Parse(sor[2]);
                 }
+                // BEOLVASÁS VÉGE
             }
 
             public void Diagnosztika()
@@ -52,24 +51,33 @@ namespace grafok_dijkstra
                 {
                     Console.Write($"{i} ");
                     for (int j = 0; j < szomszedsagi_matrix.Length; j++)
-                        Console.Write($"{szomszedsagi_matrix[i][j]} ");
+                        if (szomszedsagi_matrix[i][j] == int.MaxValue)
+                            Console.Write($"X ");
+                        else
+                            Console.Write($"{szomszedsagi_matrix[i][j]} ");
                     Console.WriteLine();
                 }
-
-                //for (int i = 0; i < szomszedsagi_matrix.Length; i++)
-                //    Console.Write($"[{i}]: [{String.Join(", ", szomszedsagi_matrix[i])}]\n");
                 Console.WriteLine("\n-----------------------\n");
             }
 
             public void Dijkstra_algoritmus(int eredet)
             {
-                List<int[]> csucslista = new List<int[]>();
+                int[] tav = new int[szomszedsagi_matrix.Length];
+                int[] honnan= new int[szomszedsagi_matrix.Length];
 
+                for (int i = 0; i < szomszedsagi_matrix.Length; i++)
+                {
+                    tav[i] = int.MaxValue;
+                    honnan[i] = -1;
+                }
+
+
+                List<(int,int)> result = new List<(int, int)>
                 List<int> nem_latogatott = new List<int>();
 
                 for (int i = 0; i < szomszedsagi_matrix.Length; i++)
                 {
-                    csucslista.Add(new int[] {-1,int.MaxValue}); // {előző csúcs, legrövidebb út}
+                    result.Add((-1, int.MaxValue)); // {előző csúcs, legrövidebb út hossza}
                     nem_latogatott.Add(i);
                 }
 
@@ -77,23 +85,15 @@ namespace grafok_dijkstra
                 int ut;
 
                 int vizsgalt = eredet;
-                csucslista[vizsgalt][1] = 0;
+                result[eredet] = (-1, 0);
 
-                while (!nem_latogatott.Any())
+                while (nem_latogatott.Any())
                 {
-                    for (int i = 0; i < length; i++)
-                    {
-                        ut = vizsgalt + szomszedsagi_matrix[i][i];
-                        if (ut < csucslista[i][1])
-                        {
-                            csucslista[i][0] = vizsgalt;
-                            csucslista[i][1] = ut;
-                        }
-                    }
-
 
                     nem_latogatott.Remove(vizsgalt);
                 }
+                /*
+                */
             }
         }
         static void Main(string[] args)

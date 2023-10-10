@@ -227,5 +227,76 @@ Ha magát az útvonalat szeretnénk megkapni, akkor szimplán elindulunk visszaf
 Az adatok tárolásához ***kupacokat** (priority queue)* fogunk  használni, mivel mindig a lerövidebb utat akarjuk először megvizsgálni.
 
 ```
+Függvény Dijkstra_algoritmus (graf: Gráf, eredet: Egész):
+    Lokális:
+        valami: Egész
+
+
+    dist[source] ← 0
+
+    create vertex priority queue Q
+
+
+    Ciklus ...:
+    Ciklus vége
+
+    for each vertex v in Graph.Vertices:
+        if v ≠ source
+            dist[v] ← INFINITY
+            prev[v] ← UNDEFINED
+
+        Q.add_with_priority(v, dist[v])
+
+
+
+    while Q is not empty:
+        u ← Q.extract_min()
+        for each neighbor v of u:
+            alt ← dist[u] + Graph.Edges(u, v)
+            if alt < dist[v]:
+                dist[v] ← alt
+                prev[v] ← u
+                Q.decrease_priority(v, alt)
+    return dist, prev
+
+
+    Függvény El_lehet_e_jutni_szelessegivel(graf: Graf, innen: Egész, ide: Egész): Logikai
+    Lokális:
+        fehér: Egész
+        szürke: Egész
+        fekete: Egész
+        tennivalók: Sor
+        szín: Tömb[Egész]
+        tennivaló: Egész
+
+    fehér := 0
+    szürke := 1
+    fekete := 2
+
+    szín := új Tömb[Egész](graf.Csúcsszama)
+
+    tennivalók := új Sor
+    tennivalók.Beletesz(innen)
+    szín[innen] := szürke
+
+    El_lehet_e_jutni := Hamis
+
+    Ciklus amíg nem El_lehet_e_jutni és nem tennivalók.Üres():
+        tennivaló := tennivalók.Kivesz()
+
+        Ha feldolgozando = ide:
+            El_lehet_e_jutni := Igaz
+        Különben:
+            szín[feldolgozando] := fekete
+
+            Iteráció szomszéd eleme graf.szomszédai[tennivaló]:
+                Ha szín[szomszéd] = fehér:
+                    tennivalók.Beletesz(szomszéd)
+                    szín[szomszéd] := szürke
+                Elágazás vége
+            Iteráció vége
+        Elágazás vége
+    Ciklus vége
+Függvény vége
 ```
 C#
