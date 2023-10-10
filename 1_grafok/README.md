@@ -173,7 +173,7 @@ Függvény vége
 
 ## Dijkstra-algoritmus
 
-A **Djikstra-algoritmus** egy (gráf bejárással kombinált) mohó algoritmus, amit súlyozott gráfoknál használunk, a legrövidebb út megállapítására egy adott csúcsból. 
+A **Djikstra-algoritmus** egy (gráf bejárással kombinált) mohó algoritmus a legrövidebb út megállapítására egy adott csúcsból. Súlyozott gráfoknál használunk.
 
 
 > #### Wikipédia percek:
@@ -300,3 +300,5 @@ Függvény Dijkstra_algoritmus (graf: Gráf, eredet: Egész):
 Függvény vége
 ```
 C#
+
+## Floyd–Warshall-algoritmus
