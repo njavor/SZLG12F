@@ -6,11 +6,14 @@
     2. Bejárások (szélességi, mélységi)
     3. Legrövidebb út
     4. Dijkstra-algoritmus
+2. [Szimulációk](2_szimulaciok)
+
 
 ## Házi feladatok
 | Témakör | Feladat | /100 |
 | :---: | :---: | :---: |
-| **GRAF** | Haladó -> Gráfok, mélységi bejárás -> 69. Kerítés ()
+| **GRAF** | Haladó -> Gráfok, mélységi bejárás -> 69. Kerítés () | <i style="color:yellow">nincs leadva</span> |
+
 
 ## Órai feladatok
 ### 1. [Gráfok](1_grafok)
@@ -18,3 +21,5 @@
 - [Általános](1_grafok/grafok-altalanos/Program.cs)
 - [Csúcslista](1_grafok/grafok-csucslista/Program.cs)
 - [Dijkstra](1_grafok/grafok-dijkstra/Program.cs)
+
+### 2. [Szimulációk](2_szimulaciok)
