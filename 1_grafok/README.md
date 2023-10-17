@@ -33,7 +33,7 @@ Indulás után, mikor egy elágazáshoz érünk, akkor az egyik úton továbbhal
 ### Példa
 
 Vegyük az alábbi irányított gráfot példaként:
-![](_assets/graf-bejarasok.png)
+![](../_assets/graf-bejarasok.png)
 
 **Feladat: eljutni a ```0```-ás csúcsból a ```7```-es csúcsba**
 
@@ -43,15 +43,15 @@ Vegyük az alábbi irányított gráfot példaként:
 
 | # | Szélességi bejárás (BFS) | teendők<br>sorrendje | Mélységi bejárás (DFS) | teendők<br>sorrendje |
 | :---: | :---: | :---: | :---: | :---: |
-| **0.**| ![](_assets/graf-bejarasok-1.png) | 0 | ![](_assets/graf-bejarasok-1.png) | 0 |
-| **1.**| ![](_assets/graf-bejarasok-2.png) | 1<br>2<br>3<br>5<br>6 | ![](_assets/graf-bejarasok-2.png) | 1<br>2<br>3<br>5<br>6 |
-| **2.**| ![](_assets/graf-bejarasok-3.png) | 2<br>3<br>5<br>6 | ![](_assets/graf-bejarasok-3.png) | 2<br>3<br>5<br>6 |
-| **3.**| ![](_assets/graf-bejarasok-4.png) | 3<br>5<br>6<br>4 | ![](_assets/graf-bejarasok-4.png) | 4<br>3<br>5<br>6 |
-| **4.**| ![](_assets/graf-bejarasok-5sz.png) | 5<br>6<br>4<br>7 | ![](_assets/graf-bejarasok-5m.png) | 7<br>3<br>5<br>6 |
-| **5.**| ![](_assets/graf-bejarasok-6sz.png) | 6<br>4<br>7 | ![](_assets/graf-bejarasok-6m.png) | **M<br>E<br>G<br>V<br>A<br>N** |
-| **6.**| ![](_assets/graf-bejarasok-7sz.png) | 4<br>7 |  | |
-| **7.**| ![](_assets/graf-bejarasok-8sz.png) | 7 |  | |
-| **8.**| ![](_assets/graf-bejarasok-9sz.png) | **M<br>E<br>G<br>V<br>A<br>N** |  | |
+| **0.**| ![](../_assets/graf-bejarasok-1.png) | 0 | ![](../_assets/graf-bejarasok-1.png) | 0 |
+| **1.**| ![](../_assets/graf-bejarasok-2.png) | 1<br>2<br>3<br>5<br>6 | ![](../_assets/graf-bejarasok-2.png) | 1<br>2<br>3<br>5<br>6 |
+| **2.**| ![](../_assets/graf-bejarasok-3.png) | 2<br>3<br>5<br>6 | ![](../_assets/graf-bejarasok-3.png) | 2<br>3<br>5<br>6 |
+| **3.**| ![](../_assets/graf-bejarasok-4.png) | 3<br>5<br>6<br>4 | ![](../_assets/graf-bejarasok-4.png) | 4<br>3<br>5<br>6 |
+| **4.**| ![](../_assets/graf-bejarasok-5sz.png) | 5<br>6<br>4<br>7 | ![](../_assets/graf-bejarasok-5m.png) | 7<br>3<br>5<br>6 |
+| **5.**| ![](../_assets/graf-bejarasok-6sz.png) | 6<br>4<br>7 | ![](../_assets/graf-bejarasok-6m.png) | **M<br>E<br>G<br>V<br>A<br>N** |
+| **6.**| ![](../_assets/graf-bejarasok-7sz.png) | 4<br>7 |  | |
+| **7.**| ![](../_assets/graf-bejarasok-8sz.png) | 7 |  | |
+| **8.**| ![](../_assets/graf-bejarasok-9sz.png) | **M<br>E<br>G<br>V<br>A<br>N** |  | |
 </details>
 
 Ebben a példában a mélységi bejárás bizonyult gyorsabbnak, ám ha mondjuk a 7-es csúcs helyett pl. a 3-as csúcs elérhetőségét vizsgáltuk volna, akkor a szélességi bejárás lett volna gyorsabb. *(Az 1-es csúcsból az 5-ös csúcsba eljutni pedig nem lehetséges.)* Felmerül ekkor a kérdés:
@@ -118,7 +118,7 @@ Függvény vége
 ```
 </details>
 
-[C#](_assets/bfs.cs)
+[C#](../_assets/bfs.cs)
 
 
 <details>
@@ -166,7 +166,7 @@ Függvény vége
 ```
 </details>
 
-[C#](_assets/dfs.cs)
+[C#](../_assets/dfs.cs)
 
 
 ## Legrövidebb út
@@ -198,7 +198,7 @@ Ha egy csúcsba több úton is eljuthatunk, akkor meg kell vizsgálnunk, hogy az
 ### Példa
 
 Példán keresztül talán egyszerűbb megérteni. Vegyük az alábbi súlyozott irányítatlan gráfot:
-![](_assets/graf-dijkstra.png)
+![](../_assets/graf-dijkstra.png)
 
 **Feladat: ```A``` és ```B``` csúcs közötti legrövidebb út megtalálása**
 
@@ -208,13 +208,13 @@ Példán keresztül talán egyszerűbb megérteni. Vegyük az alábbi súlyozott
 
 | # | Dijkstra-algoritmus | legrövidebb<br>út |  látogatott<br>csúcsok | még nem<br>látogatott<br>csúcsok |
 | :--: | :--: | :--: |  :--: | :--: |
-| 0. | ![](_assets/graf-dijkstra-1.png) | ![](_assets/graf-dijkstra-12.png) | [] |  [A,B,C,D,E] |
-| 1. | ![](_assets/graf-dijkstra-2.png) | ![](_assets/graf-dijkstra-22.png) | [] |  [A,B,C,D,E] |
-| 2. | ![](_assets/graf-dijkstra-3.png) | ![](_assets/graf-dijkstra-32.png) | [A] |  [B,C,D,E] |
-| 3. | ![](_assets/graf-dijkstra-4.png) | ![](_assets/graf-dijkstra-42.png) | [A,D] |  [B,C,E] |
-| 4. | ![](_assets/graf-dijkstra-5.png) | ![](_assets/graf-dijkstra-52.png) | [A,D,E] |  [B,C] |
-| 5. | ![](_assets/graf-dijkstra-6.png) | ![](_assets/graf-dijkstra-52.png) | [A,D,E,B] |  [C] |
-| 5. | ![](_assets/graf-dijkstra-7.png) | ![](_assets/graf-dijkstra-52.png) | [A,D,E,B,C] |  [] |
+| 0. | ![](../_assets/graf-dijkstra-1.png) | ![](../_assets/graf-dijkstra-12.png) | [] |  [A,B,C,D,E] |
+| 1. | ![](../_assets/graf-dijkstra-2.png) | ![](../_assets/graf-dijkstra-22.png) | [] |  [A,B,C,D,E] |
+| 2. | ![](../_assets/graf-dijkstra-3.png) | ![](../_assets/graf-dijkstra-32.png) | [A] |  [B,C,D,E] |
+| 3. | ![](../_assets/graf-dijkstra-4.png) | ![](../_assets/graf-dijkstra-42.png) | [A,D] |  [B,C,E] |
+| 4. | ![](../_assets/graf-dijkstra-5.png) | ![](../_assets/graf-dijkstra-52.png) | [A,D,E] |  [B,C] |
+| 5. | ![](../_assets/graf-dijkstra-6.png) | ![](../_assets/graf-dijkstra-52.png) | [A,D,E,B] |  [C] |
+| 5. | ![](../_assets/graf-dijkstra-7.png) | ![](../_assets/graf-dijkstra-52.png) | [A,D,E,B,C] |  [] |
 </details>
 
 A tárolt adatok táblázatából egyből láthatjuk, hogy ```B``` csúcsba 3 a legrövidebb út, amit ```D```csúcson keresztül érhetünk el.

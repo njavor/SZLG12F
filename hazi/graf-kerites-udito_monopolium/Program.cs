@@ -10,7 +10,7 @@ namespace graf_kerites_udito_monopolium
     {
         class Bergengoc
         {
-            public int italpreferencia; //Calo vagy Pipse
+            public bool italpreferencia; //Calo (0) vagy Pipse (1)
             public List<int> baratok;
 
             public Bergengoc(int ital)
@@ -26,10 +26,13 @@ namespace graf_kerites_udito_monopolium
                     Console.Write($"[{i} - ital:{italpreferencia}]: [{String.Join(", ", baratok[i])}]\n");
                 Console.WriteLine("\n-----------------------\n");
             }
+
+            public void Italvaltas() => italpreferencia = !italpreferencia;
         }
         class Teszteset
         {
             List<Bergengoc> bergengoclista;
+            (int C, int P) = (0,0);
 
             public Teszteset(int N, int M)
             {
@@ -56,6 +59,8 @@ namespace graf_kerites_udito_monopolium
                 }
                 Console.WriteLine("\n-----------------------\n");
             }
+
+            
         }
         static void Main(string[] args)
         {
