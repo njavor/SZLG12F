@@ -1,4 +1,4 @@
-# Útinapló (Szövegszerkesztés)
+# [Útinapló (Szövegszerkesztés)](https://molnatt.github.io/utinaplo-word.html)
 
 ### 2. Címoldal, amin csak a cím, a dátum és a név szerepel
 | ![](/_assets/hazi/stb-utinaplo/2.png) | oldalszám:<br>1 |

@@ -12,7 +12,7 @@
 ## Házi feladatok
 | Témakör | Feladat | /100 |
 | :---: | :---: | :---: |
-| ***STB*** | Útinapló (Szövegszerkesztés) | <i style="color:yellow">nincs leadva</span> |
+| ***STB*** | [Útinapló (Szövegszerkesztés)](hazi/stb-utinaplo/) | <i style="color:yellow">nincs leadva</span> |
 | **GRAF** | Haladó -> Gráfok, mélységi bejárás -> 69. Kerítés (Üdítő monopólium) | <i style="color:yellow">nincs leadva</span> |
 
 
