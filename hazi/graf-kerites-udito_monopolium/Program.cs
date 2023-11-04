@@ -1,128 +1,84 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace graf_kerites_udito_monopolium
+class Program
 {
-    internal class Program
+    static List<int>[] graph;
+    static int[] drinks;
+
+    static int BFS(int start)
     {
-        class Bergengoc
+        Queue<int> queue = new Queue<int>();
+        queue.Enqueue(start);
+
+        int[] visited = new int[drinks.Length];
+        visited[start] = 1;
+
+        int targetDrink = drinks[start];
+        int weeks = 0;
+
+        while (queue.Count > 0)
         {
-            public int italpreferencia; //Calo vagy Pipse
-            public List<int> baratok;
+            int count = queue.Count;
 
-            public Bergengoc(int ital)
+            while (count > 0)
             {
-                italpreferencia = ital;
-                baratok = new List<int>();
-            }
+                int current = queue.Dequeue();
 
-            public void Diagnosztika()
-            {
-                Console.WriteLine("\n\n-----------------------\nDiagnosztika - bergeng\n- - - - - - - - - - - -\n");
-                for (int i = 0; i < baratok.Count(); i++)
-                    Console.Write($"[{i} - ital:{italpreferencia}]: [{String.Join(", ", baratok[i])}]\n");
-                Console.WriteLine("\n-----------------------\n");
-            }
-        }
-        class Teszteset
-        {
-            List<Bergengoc> bergengoclista;
-
-            public Teszteset(int N, int M)
-            {
-                bergengoclista = new List<Bergengoc>();
-                string[] sor = Console.ReadLine().Split(' ');
-                for (int i = 0; i < N; i++)
-                    bergengoclista.Add(new Bergengoc(int.Parse(sor[i])));
-
-                for (int j = 0; j < M; j++)
+                foreach (int neighbor in graph[current])
                 {
-                    sor = Console.ReadLine().Split(' ');
-                    //kölcsönös a kapcsolat
-                    bergengoclista[int.Parse(sor[0])-1].baratok.Add(int.Parse(sor[1]) - 1);
-                    bergengoclista[int.Parse(sor[1]) - 1].baratok.Add(int.Parse(sor[0]) - 1);
+                    if (visited[neighbor] == 0)
+                    {
+                        visited[neighbor] = 1;
+                        queue.Enqueue(neighbor);
+
+                        if (drinks[neighbor] != targetDrink)
+                        {
+                            drinks[neighbor] = targetDrink;
+                        }
+                    }
                 }
+
+                count--;
             }
 
-            public void Diagnosztika()
-            {
-                Console.WriteLine("\n\n-----------------------\nDiagnosztika\n- - - - - - - - - - - -\n");
-                for (int i = 0; i < bergengoclista.Count(); i++)
-                {
-                    Console.Write($"[{i} - ital:{bergengoclista[i].italpreferencia}]: [{String.Join(", ", bergengoclista[i].baratok)}]\n");
-                }
-                Console.WriteLine("\n-----------------------\n");
-            }
+            weeks++;
         }
-        static void Main(string[] args)
+
+        return weeks;
+    }
+
+    static void Main(string[] args)
+    {
+        int T = int.Parse(Console.ReadLine());
+
+        for (int t = 0; t < T; t++)
         {
-            int T = int.Parse(Console.ReadLine());
-            List<Teszteset> tesztesetek = new List<Teszteset>();
+            string[] input = Console.ReadLine().Split();
+            int N = int.Parse(input[0]);
+            int M = int.Parse(input[1]);
 
-            string[] sor;
-            int N, M;
-            for (int i = 0; i < T; i++)
+            drinks = new int[N];
+            graph = new List<int>[N];
+
+            for (int i = 0; i < N; i++)
             {
-                sor = Console.ReadLine().Split(' ');
-                N = int.Parse(sor[0]);
-                M = int.Parse(sor[1]);
-
-                tesztesetek.Add(new Teszteset(N, M));
+                drinks[i] = int.Parse(Console.ReadLine());
+                graph[i] = new List<int>();
             }
 
-
-
-
-            //diagnosztika
-            /*
-             */
-            foreach (var teszt in tesztesetek)
+            for (int i = 0; i < M; i++)
             {
-                Console.WriteLine("TESZTEK DIAGNOSZTIKÁJA");
-                teszt.Diagnosztika();
+                input = Console.ReadLine().Split();
+                int u = int.Parse(input[0]) - 1;
+                int v = int.Parse(input[1]) - 1;
+
+                graph[u].Add(v);
+                graph[v].Add(u);
             }
+
+            int result = BFS(0);
+            Console.WriteLine(result);
         }
     }
 }
-
-/*
-
-Gondolatmenet:
-    meg kell keresni a legtöbb baráttal rendelkező bergengócot,
-    úgy hogy a kevésbé szeretett üdítőt szeresse.
-
-
-* Példa bemenet
-2
-4 3
-0 1 0 0
-1 2
-2 3
-2 4
-5 4
-0 1 1 0 1
-1 2
-2 3
-3 4
-4 5
-
-2
-4 3
-0 1 0 0
-0 1
-1 2
-1 3
-5 4
-0 1 1 0 1
-0 1
-1 2
-2 3
-3 4
-
- * Példa kimenet
-1
-2
-*/
