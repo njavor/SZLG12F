@@ -19,13 +19,36 @@ class Program
 
         while (queue.Count > 0)
         {
-            int count = queue.Count;
+            public bool italpreferencia; //Calo (0) vagy Pipse (1)
+            public List<int> baratok;
 
             while (count > 0)
             {
                 int current = queue.Dequeue();
 
-                foreach (int neighbor in graph[current])
+            public void Diagnosztika()
+            {
+                Console.WriteLine("\n\n-----------------------\nDiagnosztika - bergeng\n- - - - - - - - - - - -\n");
+                for (int i = 0; i < baratok.Count(); i++)
+                    Console.Write($"[{i} - ital:{italpreferencia}]: [{String.Join(", ", baratok[i])}]\n");
+                Console.WriteLine("\n-----------------------\n");
+            }
+
+            public void Italvaltas() => italpreferencia = !italpreferencia;
+        }
+        class Teszteset
+        {
+            List<Bergengoc> bergengoclista;
+            (int C, int P) = (0,0);
+
+            public Teszteset(int N, int M)
+            {
+                bergengoclista = new List<Bergengoc>();
+                string[] sor = Console.ReadLine().Split(' ');
+                for (int i = 0; i < N; i++)
+                    bergengoclista.Add(new Bergengoc(int.Parse(sor[i])));
+
+                for (int j = 0; j < M; j++)
                 {
                     if (visited[neighbor] == 0)
                     {
@@ -42,7 +65,17 @@ class Program
                 count--;
             }
 
-            weeks++;
+            public void Diagnosztika()
+            {
+                Console.WriteLine("\n\n-----------------------\nDiagnosztika\n- - - - - - - - - - - -\n");
+                for (int i = 0; i < bergengoclista.Count(); i++)
+                {
+                    Console.Write($"[{i} - ital:{bergengoclista[i].italpreferencia}]: [{String.Join(", ", bergengoclista[i].baratok)}]\n");
+                }
+                Console.WriteLine("\n-----------------------\n");
+            }
+
+            
         }
 
         return weeks;
