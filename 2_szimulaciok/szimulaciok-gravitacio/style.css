@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding:0;
+    background-color: black;
+    color: white;
+
+    font-family: 'Work Sans', sans-serif;
+
+    transition: .2s;
+}
+html,body{height:100%;}
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+button{
+    background-color: #2ca08f;
+    padding:.5rem;
+    font-weight: 700;
+    border:0;
+    cursor: pointer;
+    font-size: 12pt;
+
+    &:hover{
+        background-color: white;
+        color:#2ca08f;
+    }
+}
+a{
+    text-decoration: none;
+
+    &:hover{
+        color: #2ca08f;
+    }
+}
+
+
+
+
+
+header{
+    height: fit-content;
+    padding: 2rem;
+    width: calc(100% - 4rem);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+svg{
+    height: 100%;
+    width: 100%;
+    border-top: 2px solid white;
+}
