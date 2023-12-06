@@ -1,19 +1,21 @@
 # SZLG 12F (2023-24)
 
 ## Témakörök
-1. [Gráfok](1_grafok)
+1. [**Gráfok**](1_grafok)
     1. Gráfreprezentációk
     2. Bejárások (szélességi, mélységi)
     3. Legrövidebb út
     4. Dijkstra-algoritmus
-2. [Szimulációk](2_szimulaciok)
+2. [**Szimulációk**](2_szimulaciok)
+    1. Gravitáció
+3. [***Szimuláció projekt***](https://github.com/njavor/szimprojekt-fogolydilemma)
 
 
 ## Házi feladatok
 | Témakör | Feladat | /100 |
 | :---: | :---: | :---: |
 | ***STB*** | [Útinapló (Szövegszerkesztés)](hazi/stb-utinaplo/) | - |
-| **GRAF** | Haladó -> Gráfok, mélységi bejárás -> 69. Kerítés (Üdítő monopólium) | <i style="color:yellow">nincs leadva</span> |
+| **GRAF** | Haladó -> Gráfok, mélységi bejárás -> 69. Kerítés (Üdítő monopólium) | <i style="color:orange">nincs leadva</span> |
 
 
 ## Órai feladatok
@@ -24,3 +26,9 @@
 - [Dijkstra](1_grafok/grafok-dijkstra/Program.cs)
 
 ### 2. [Szimulációk](2_szimulaciok)
+- [Gravitáció](2_szimulaciok/szimulaciok-gravitacio/)
+
+## Szimulációs projekt - fogolydilemma
+
+
+[bővebben](https://github.com/njavor/szimprojekt-fogolydilemma)

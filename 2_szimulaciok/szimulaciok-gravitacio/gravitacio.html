@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="egitest.js" defer></script>
+    <script src="vektor.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -18,18 +19,28 @@
 </head>
 <body>
     <header>
-        <div>
-            <h6><a href="/nikolettjavor.com" target="_blank">Jávor Nikolett</a> 12F - 2023.11.</h6>
+        <div class="col left nogap">
+            <h6><a href="https://github.com/njavor" target="_blank">Jávor Nikolett 12F</a></h6>
             <h1>Gravitáció szimuláció</h1>
-
         </div>
-        <div>
-            <label for="vx">x</label>
-            <input type="number" step="0.1" id="vx">
-            <label for="vy">y</label>
-            <input type="number" step="0.1" id="vy">
+        <div class="col">
+            <div>
+                <label for="vx">x</label>
+                <input type="number" step="0.1" id="vx">
+            </div>
+            <div>
+                <label for="vy">y</label>
+                <input type="number" step="0.1" id="vy">
+            </div>
         </div>
-        <button type="button" id="startgomb">START</button>
+        <div class="col">
+            <p></p>
+            <div>
+                <button type="button" id="startbtn">START</button>
+                <button type="button" id="stopbtn" class="red">STOP</button>
+            </div>
+            <p id="running_text" class="zold not-visible">running</p>
+        </div>
     </header>
 
     <svg>
@@ -37,12 +48,14 @@
             id="karika"
             cx="80" 
             cy="50" 
-            r="40" 
+            r="10" 
             stroke="#fff" 
             stroke-width="5"
             fill="#222" />
     </svg>
 
-
+    <footer>
+        <h6>2023. 11.</h6>
+    </footer>
 </body>
 </html>

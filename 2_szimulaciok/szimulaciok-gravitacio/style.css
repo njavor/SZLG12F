@@ -7,6 +7,9 @@
     font-family: 'Work Sans', sans-serif;
 
     transition: .2s;
+
+
+    --zold: #2ca08f;
 }
 html,body{height:100%;}
 body{
@@ -15,8 +18,18 @@ body{
     justify-content: left;
     align-items: center;
 }
+div{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: .5rem;
+
+    &.left{
+        justify-content: left;
+    }
+}
 button{
-    background-color: #2ca08f;
+    background-color: var(--zold);
     padding:.5rem;
     font-weight: 700;
     border:0;
@@ -25,14 +38,51 @@ button{
 
     &:hover{
         background-color: white;
-        color:#2ca08f;
+        color:var(--zold);
+
+        &.red{
+            color: brown;
+        }
     }
 }
 a{
     text-decoration: none;
 
     &:hover{
-        color: #2ca08f;
+        color: var(--zold);
+    }
+}
+input{
+    background-color: white;
+    color: black;
+    border: none;
+    padding:.25rem;
+
+    &:focus-visible{
+        outline-color: black;
+    }
+}
+.not-visible{
+    visibility: hidden;
+}
+
+
+.red{
+    background-color: brown;
+}
+.zold{
+    color: var(--zold);
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:.5rem;
+
+    &.left{
+        align-items: flex-start;
     }
 }
 
@@ -55,4 +105,17 @@ svg{
     height: 100%;
     width: 100%;
     border-top: 2px solid white;
+}
+
+footer{
+    position: absolute;
+    bottom:0;
+    background: transparent;
+    padding-block: .5rem;
+}
+
+
+
+.nogap{
+    gap: 0;
 }

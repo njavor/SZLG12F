@@ -1,8 +1,35 @@
+function to_degree(radian){return radian*180/Math.PI;}
+function to_radian(degree){return degree*Math.PI/100;}
+
+
+
+class PolarVektor{
+    constructor(f,r){
+        this.f = f;
+        this.r = r;
+    }
+
+    forgatott(f){
+        return new PolarVektor(this.f+f, this.r);
+    }
+    
+    cartesian(){
+        let radf = to_radian(this.f);
+        return new Vektor(this.r*Math.cos(radf), this.r*Math.sin(radf));
+    }
+}
+
+
 class Vektor{
     constructor(x,y){
         this.x = x;
         this.y = y;
     }
+
+    polar(){
+        return new PolarVektor(to_degree(Math.atan2(this.y,this.x)), this.hossz());
+    }
+
 
     // +  -
     static osszead(u,v){
@@ -51,19 +78,10 @@ class Vektor{
     }
 
 
-    // skalarszoroz(u,v){
-        
-    // }
-
-    szamosztva(u,v){
-        
+    
+    static forgatott(u, fok){
+        return u.polar().forgat(fok).cartesian();   
     }
-
-
-    
-    
-
-
 }
 
 
