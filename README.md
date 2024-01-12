@@ -15,7 +15,7 @@
 | Témakör | Feladat | /100 |
 | :---: | :---: | :---: |
 | ***STB*** | [Útinapló (Szövegszerkesztés)](hazi/stb-utinaplo/) | - |
-| **GRAF** | Haladó -> Gráfok, mélységi bejárás -> 69. Kerítés (Üdítő monopólium) | <i style="color:orange">nincs leadva</span> |
+| **GRAF** | [Haladó -> Gráfok, mélységi bejárás -> 69. Kerítés (Üdítő monopólium)](hazi/graf-kerites-udito_monopolium) | <i style="color:orange">nincs leadva</span> |
 
 
 ## Órai feladatok
