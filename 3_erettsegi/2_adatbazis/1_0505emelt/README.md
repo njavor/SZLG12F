@@ -3,7 +3,7 @@
 #### 1,2 Adatimportálás
 **KATEGÓRIA**
 ```sql
-CREATE TABLE KATEGORIA
+CREATE TABLE kategoria
 (
   kat_kod	INT unsigned PRIMARY KEY AUTO_INCREMENT,
   kat_nev	VARCHAR(50) NOT NULL,
@@ -27,7 +27,7 @@ INSERT INTO kategoria (kat_kod, kat_nev) VALUES
 
 ##### ELADÁS
 ```sql
-CREATE TABLE ELADAS
+CREATE TABLE eladas
 (
     aru_kod INT unsigned PRIMARY KEY AUTO_INCREMENT,
     mennyiseg   INT unsigned NOT NULL,
@@ -89,8 +89,10 @@ INSERT INTO eladas (aru_kod, mennyiseg) VALUES
 
 </details>
 
+##### ÁRU
 ```sql
-CREATE TABLE ARU(
+CREATE TABLE aru
+(
 	aru_kod INT unsigned PRIMARY KEY AUTO_INCREMENT,
 	kat_kod INT unsigned NOT NULL,
 	nev VARCHAR(100) NOT NULL,
@@ -155,6 +157,8 @@ CREATE TABLE ARU(
 ```
 
 </details>
+
+---
 
 #### 3. 1000 Ft-nál drágább áruk (név, ár)
 ```sql
