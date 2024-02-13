@@ -1,0 +1,8 @@
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\P1_Sudoku\bin\Debug\P1_Sudoku.exe.config
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\P1_Sudoku\bin\Debug\P1_Sudoku.exe
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\P1_Sudoku\bin\Debug\P1_Sudoku.pdb
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\P1_Sudoku\obj\Debug\P1_Sudoku.csproj.AssemblyReference.cache
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\P1_Sudoku\obj\Debug\P1_Sudoku.csproj.SuggestedBindingRedirects.cache
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\P1_Sudoku\obj\Debug\P1_Sudoku.csproj.CoreCompileInputs.cache
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\P1_Sudoku\obj\Debug\P1_Sudoku.exe
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\P1_Sudoku\obj\Debug\P1_Sudoku.pdb

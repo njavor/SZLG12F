@@ -9,6 +9,9 @@
 2. [**Szimulációk**](2_szimulaciok)
     1. Gravitáció
 3. [***Szimuláció projekt***](https://github.com/njavor/szimprojekt-fogolydilemma)
+4. [**Emelt szintű érettségi**](3_erettsegi)
+    1. Programozás (C#)
+    2. Adatbáziskezelés
 
 
 ## Házi feladatok

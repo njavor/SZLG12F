@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3c1939d0-35f6-4b52-b61b-d03b25b30960": {
+      "ProjectGuid": "3c1939d0-35f6-4b52-b61b-d03b25b30960",
+      "DisplayName": "P1_Sudoku",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
