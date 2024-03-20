@@ -1,0 +1,8 @@
+C:\Users\javor_nikolett\Desktop\SZLG12F\3_erettsegi\1_programozas\P4_reklam\P4_reklam\bin\Debug\P4_reklam.exe.config
+C:\Users\javor_nikolett\Desktop\SZLG12F\3_erettsegi\1_programozas\P4_reklam\P4_reklam\bin\Debug\P4_reklam.exe
+C:\Users\javor_nikolett\Desktop\SZLG12F\3_erettsegi\1_programozas\P4_reklam\P4_reklam\bin\Debug\P4_reklam.pdb
+C:\Users\javor_nikolett\Desktop\SZLG12F\3_erettsegi\1_programozas\P4_reklam\P4_reklam\obj\Debug\P4_reklam.csproj.AssemblyReference.cache
+C:\Users\javor_nikolett\Desktop\SZLG12F\3_erettsegi\1_programozas\P4_reklam\P4_reklam\obj\Debug\P4_reklam.csproj.SuggestedBindingRedirects.cache
+C:\Users\javor_nikolett\Desktop\SZLG12F\3_erettsegi\1_programozas\P4_reklam\P4_reklam\obj\Debug\P4_reklam.csproj.CoreCompileInputs.cache
+C:\Users\javor_nikolett\Desktop\SZLG12F\3_erettsegi\1_programozas\P4_reklam\P4_reklam\obj\Debug\P4_reklam.exe
+C:\Users\javor_nikolett\Desktop\SZLG12F\3_erettsegi\1_programozas\P4_reklam\P4_reklam\obj\Debug\P4_reklam.pdb
