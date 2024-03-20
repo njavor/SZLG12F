@@ -67,3 +67,7 @@
 
 ## Szimulációs projekt - választási rendszerek
 [bővebben](https://github.com/njavor/szimprojekt-fogolydilemma)
+
+## Digitális kultúra alkalmazói OKTV döntő gyakorlás
+- **[informatika i. kategória - 2022/23](_egyeb/oktv/2022-23/)**
+- **[informatika i. kategória - 2021/22](_egyeb/oktv/2021-22/)**
