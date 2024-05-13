@@ -1,0 +1,8 @@
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\5_epitmenyado\bin\Debug\5_epitmenyado.exe.config
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\5_epitmenyado\bin\Debug\5_epitmenyado.exe
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\5_epitmenyado\bin\Debug\5_epitmenyado.pdb
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\5_epitmenyado\obj\Debug\5_epitmenyado.csproj.AssemblyReference.cache
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\5_epitmenyado\obj\Debug\5_epitmenyado.csproj.SuggestedBindingRedirects.cache
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\5_epitmenyado\obj\Debug\5_epitmenyado.csproj.CoreCompileInputs.cache
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\5_epitmenyado\obj\Debug\5_epitmenyado.exe
+D:\.programming\SZLG12F\3_erettsegi\1_programozas\5_epitmenyado\obj\Debug\5_epitmenyado.pdb
