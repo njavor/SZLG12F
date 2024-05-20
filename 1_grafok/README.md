@@ -173,7 +173,7 @@ Függvény vége
 
 ## Dijkstra-algoritmus
 
-A **Djikstra-algoritmus** egy (gráf bejárással kombinált) mohó algoritmus a legrövidebb út megállapítására egy adott csúcsból. Súlyozott gráfoknál használunk.
+A **Djikstra-algoritmus** egy (gráf bejárással kombinált) mohó algoritmus a legrövidebb út megállapítására egy adott csúcsból. Súlyozott gráfoknál használjunk.
 
 
 > #### Wikipédia percek:
@@ -189,7 +189,7 @@ Minden csúcsnál két információt tárolunk, azt hogy ```mennyibe került ide
 
 Ha egy csúcsba több úton is eljuthatunk, akkor meg kell vizsgálnunk, hogy az előző út, amin eljutottunk oda, az gyorsabb-e. Ha igen, akkor nem csinálunk semmit, ha nem, akkor felülírjuk az előző értéket.
 
-[*Angol nyelvű magyarázó videó*]()
+<a href="https://www.youtube.com/watch?v=pVfj6mxhdMw" target="_blank"><i>Angol nyelvű magyarázó videó</i></a>
 
 **FONTOS:** Negatív számokkal nem működik.
 
@@ -197,7 +197,7 @@ Ha egy csúcsba több úton is eljuthatunk, akkor meg kell vizsgálnunk, hogy az
 <br><br>
 ### Példa
 
-Példán keresztül talán egyszerűbb megérteni. Vegyük az alábbi súlyozott irányítatlan gráfot:
+Vegyük az alábbi súlyozott irányítatlan gráfot:
 ![](../_assets/1_grafok/graf-dijkstra.png)
 
 **Feladat: ```A``` és ```B``` csúcs közötti legrövidebb út megtalálása**

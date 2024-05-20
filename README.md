@@ -63,6 +63,9 @@
 </li>
 </ol>
 
+- **Teljes feladatsorok:**
+    - [digitális kultúra (23.10.25)](3_erettsegi/0_teljes/2023-okt/)
+
 
 
 ## Szimulációs projekt - választási rendszerek

@@ -1,0 +1,7 @@
+D:\!!programming\SZLG12F\3_erettsegi\0_teljes\2023-okt\reklam\bin\Debug\reklam.exe.config
+D:\!!programming\SZLG12F\3_erettsegi\0_teljes\2023-okt\reklam\bin\Debug\reklam.exe
+D:\!!programming\SZLG12F\3_erettsegi\0_teljes\2023-okt\reklam\bin\Debug\reklam.pdb
+D:\!!programming\SZLG12F\3_erettsegi\0_teljes\2023-okt\reklam\obj\Debug\reklam.csproj.AssemblyReference.cache
+D:\!!programming\SZLG12F\3_erettsegi\0_teljes\2023-okt\reklam\obj\Debug\reklam.csproj.CoreCompileInputs.cache
+D:\!!programming\SZLG12F\3_erettsegi\0_teljes\2023-okt\reklam\obj\Debug\reklam.exe
+D:\!!programming\SZLG12F\3_erettsegi\0_teljes\2023-okt\reklam\obj\Debug\reklam.pdb
