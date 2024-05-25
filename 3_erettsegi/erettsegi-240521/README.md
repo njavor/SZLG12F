@@ -9,7 +9,7 @@ dátum: 2024.05.21.
 
 ---
 
-## 1B. Lámpák (táblázatkezelés)
+## 1B. Lámpák (táblázatkezelés) | [lampak.xlsx](./lampak.xlsx)
 
 ##### 3. Véletlenszerű kapcsolás
 ```excel
@@ -48,54 +48,49 @@ HAHIÁNYZIK(INDEX(A3:I102;HOL.VAN(6;I3:I102;0);1);"Nincs ilyen")
 
 ## 2. Ingatlanközvetítő iroda (adatbázis-kezelés)
 
-#### 2. Közterületek, ahol lakásokat kínálnak
+#### 2. Közterületek, ahol lakásokat kínálnak | [2kozterulet.sql](./2kozterulet.sql)
 ```sql
 SELECT DISTINCT(kozterulet)
 FROM ingatlan
 WHERE lakas = 1
-ORDER BY kozterulet
-;
+ORDER BY kozterulet;
 ```
 
-#### 3. ```Agyagos utca``` ingatlanjainak meghirdetési árai
+#### 3. ```Agyagos utca``` ingatlanjainak meghirdetési árai | [3agyagos.sql](./3agyagos.sql)
 ```sql
 SELECT hazszam, ar
 FROM hirdetes, ingatlan
 WHERE ingatlanid = ingatlan.id
     AND kozterulet = "Agyagos utca" 
-    AND allapot = "meghirdetve"
-    ;
+    AND allapot = "meghirdetve";
 ```
 
-#### 4. Bevétel 2021-ben
+#### 4. Bevétel 2021-ben ([4dij.sql](./4dij.sql))
 ```sql
 SELECT SUM(ar*0.015)
 FROM hirdetes
 WHERE allapot = "eladva" 
-    AND YEAR(datum) = 2021
-    ;
+    AND YEAR(datum) = 2021;
 ```
 
-#### 5. Legdrágább és legolcsóbb meghirdetés aránya
+#### 5. Legdrágább és legolcsóbb meghirdetés aránya  | [5arany.sql](./5arany.sql)
 ```sql
 SELECT MAX(ar) / MIN(ar)
 FROM hirdetes
-WHERE allapot = "meghirdetve"
-;
+WHERE allapot = "meghirdetve";
 ```
 
-#### 6. Legrégebben meghirdetett, nem eladott/módosított ingatlan
+#### 6. Legrégebben meghirdetett, nem eladott/módosított ingatlan | [6eladatlan.sql](./6eladatlan.sql)
 ```sql
 SELECT kozterulet, hazszam, datum
 FROM hirdetes, ingatlan
 WHERE ingatlanid = ingatlan.id
     AND hirdetes.ingatlanid NOT IN (SELECT ingatlanid FROM hirdetes WHERE allapot != "meghirdetve")
 ORDER BY datum
-LIMIT 1
-;
+LIMIT 1;
 ```
 
-#### 7. Azonos áron meghirdetett és eladott ingatlanok
+#### 7. Azonos áron meghirdetett és eladott ingatlanok | [7.valtozatlan.sql](./7valtozatlan.sql)
 ```sql
 SELECT kozterulet, hazszam, hirdetes.ar
 FROM hirdetes, hirdetes AS seged1, ingatlan
@@ -103,11 +98,10 @@ WHERE hirdetes.ingatlanid = ingatlan.id
     AND hirdetes.ingatlanid = seged.ingatlanid 
     AND hirdetes.ar = seged1.ar 
     AND hirdetes.allapot = "meghirdetve" 
-    AND seged1.allapot = "eladva"
-    ;
+    AND seged1.allapot = "eladva";
 ```
 
-#### 8. Külön konyha és WC nélküli ingatlanok
+#### 8. Külön konyha és WC nélküli ingatlanok | [8nincskulon.sql](./8nincskulon.sql)
 ```sql
 SELECT kozterulet, hazszam
 FROM ingatlan
@@ -115,21 +109,20 @@ WHERE id NOT IN (SELECT ingatlanid FROM helyiseg WHERE funkcio = "konyha")
     AND id NOT IN (SELECT ingatlanid FROM helyiseg WHERE funkcio = "WC");
 ```
 
-#### 9. 180 m<sup>2</sup>-nél nagyobb alapterületű ingatlanok
+#### 9. 180 m<sup>2</sup>-nél nagyobb alapterületű ingatlanok | [9180.sql](./9180.sql)
 ```sql
 SELECT kozterulet, hazszam, SUM(IF(funkcio = "terasz", hossz*szel/2, hossz*szel))
 FROM helyiseg, ingatlan
 WHERE ingatlanid = ingatlan.id
 GROUP BY ingatlanid
-HAVING 180 < SUM(IF(funkcio = "terasz", hossz*szel/2, hossz*szel))
-;
+HAVING 180 < SUM(IF(funkcio = "terasz", hossz*szel/2, hossz*szel));
 ```
 
 
 
 
 
-## 3. Beléptető rendszer (algoritmizálás és programozás)
+## 3. Beléptető rendszer (algoritmizálás és programozás) | [belepteto > Program.cs](./belepteto/Program.cs)
 
 #### 0. Használt class
 ```cs
@@ -147,6 +140,8 @@ public class Esemeny
     }
 }
 ```
+
+
 #### 1. Beolvasás 
 ```cs
 List<Esemeny> esemenyek = new List<Esemeny>();
@@ -162,6 +157,8 @@ using (StreamReader r = new StreamReader("bedat.txt", Encoding.UTF8))
     }
 }
 ```
+
+
 #### 2. Első és utolsó be- és kilépés
 ```cs
 Console.WriteLine("2. feladat");
@@ -174,6 +171,8 @@ else Console.WriteLine($"Az első tanuló {res21.ToString().Remove(2, 2)}:{res21
 if (res22 < 1000) Console.WriteLine($"Az utolsó tanuló 0{res21.ToString()[0]}:{res21.ToString().Remove(0, 1)}-kor lépett ki a főkapun.");
 else Console.WriteLine($"Az utolsó tanuló {res22.ToString().Remove(2, 2)}:{res22.ToString().Remove(0, 2)}-kor lépett ki a főkapun.");
 ```
+
+
 #### 3. Késők összegyűjtése
 ```cs
 List<Esemeny> res3 = esemenyek.Where(x => x.tipus == 1 && 750 < x.idopont && x.idopont <= 815).ToList();
@@ -186,6 +185,8 @@ using (StreamWriter w = new StreamWriter("kesok.txt"))
     }
 }
 ```
+
+
 #### 4. Menzán ebédelők száma
 ```cs
 Console.WriteLine("4. feladat");
@@ -193,6 +194,8 @@ int res4 = esemenyek.Count(x => x.tipus == 3);
 
 Console.WriteLine($"A menzán aznap {res4} tanuló ebédelt.");
 ```
+
+
 #### 5. Könyvkölcsönzők száma, összehasonlítás
 ```cs
 Console.WriteLine("5. feladat");
@@ -201,6 +204,8 @@ int res5 = esemenyek.Where(x => x.tipus == 4).GroupBy(x => x.azonosito).Count();
 Console.WriteLine($"Aznap {res5} tanuló kölcsönzött a könyvtárban.");
 Console.WriteLine(res4 < res5 ? "Többen voltak, mint a menzán" : "Nem voltak többen, mint a menzán.");
 ```
+
+
 #### 6. Kiszökő diákok
 ```cs
 Console.WriteLine("6. feladat");
@@ -220,6 +225,8 @@ foreach (Esemeny e in esemenyek)
 }
 Console.WriteLine();
 ```
+
+
 #### 7. Iskolában töltött idő
 ```cs
 Console.WriteLine("7. feladat");
