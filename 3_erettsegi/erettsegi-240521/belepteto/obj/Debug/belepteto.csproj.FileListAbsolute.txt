@@ -1,0 +1,7 @@
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\belepteto\obj\Debug\belepteto.csproj.AssemblyReference.cache
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\belepteto\obj\Debug\belepteto.csproj.CoreCompileInputs.cache
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\belepteto\bin\Debug\belepteto.exe.config
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\belepteto\bin\Debug\belepteto.exe
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\belepteto\bin\Debug\belepteto.pdb
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\belepteto\obj\Debug\belepteto.exe
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\belepteto\obj\Debug\belepteto.pdb
