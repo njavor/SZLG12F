@@ -65,7 +65,7 @@ WHERE ingatlanid = ingatlan.id
     AND allapot = "meghirdetve";
 ```
 
-#### 4. Bevétel 2021-ben ([4dij.sql](./4dij.sql))
+#### 4. Bevétel 2021-ben | [4dij.sql](./4dij.sql)
 ```sql
 SELECT SUM(ar*0.015)
 FROM hirdetes
