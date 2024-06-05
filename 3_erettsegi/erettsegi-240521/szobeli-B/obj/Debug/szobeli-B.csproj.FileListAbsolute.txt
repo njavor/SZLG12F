@@ -1,0 +1,7 @@
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\szobeli-B\bin\Debug\szobeli-B.exe.config
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\szobeli-B\bin\Debug\szobeli-B.exe
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\szobeli-B\bin\Debug\szobeli-B.pdb
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\szobeli-B\obj\Debug\szobeli-B.csproj.AssemblyReference.cache
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\szobeli-B\obj\Debug\szobeli-B.csproj.CoreCompileInputs.cache
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\szobeli-B\obj\Debug\szobeli-B.exe
+D:\!!programming\SZLG12F\3_erettsegi\erettsegi-240521\szobeli-B\obj\Debug\szobeli-B.pdb
