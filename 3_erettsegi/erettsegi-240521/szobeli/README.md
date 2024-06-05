@@ -33,6 +33,12 @@ Függvény RomaiSzam(kar: Karakter): Szám
 Függvény vége.
 ```
 
+#### Felhasználó által látott tartalom:
+```
+Kronogramma: SUCCESSUS AD PERNICIEM MULTOS DEVOCAT
+Évszám: 3457
+```
+
 ### Megoldás:
 
 #### Kód C#-ban
